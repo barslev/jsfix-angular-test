@@ -1,6 +1,7 @@
+import { filter, map, reduce } from 'rxjs/operators';
 import { Component } from '@angular/core';
 import _ from 'lodash';
-import rxjs from 'rxjs';
+import * as rxjs from 'rxjs';
 import uuid from 'uuid';
 
 @Component({
@@ -12,11 +13,14 @@ export class SomeComponent {
     _ = _;
     subject = new rxjs.Subject();
     uuid = uuid;
+    filter = filter;
+    map = map;
+    reduce = reduce;
     constructor() {}
 
     private f() {
         _.pluck([1, 2, 3], (x) => x);
         this._.pluck([1, 2, 3], (x) => x);
-        this.subject.filter((x) => true).map((x) => x);
+        this.subject.pipe(filter((x) => true), map((x) => x));
     }
 }

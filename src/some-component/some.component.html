@@ -1,7 +1,7 @@
 {{_.pluck([1, 2, 3], x => x)}}
 
-{{subject.filter(x => true).map(x => x)}}
+{{subject.pipe(filter(x => true), map(x => x))}}
 
 {{ uuid.parse('someString') }}
 
-{{subject.reduce(x => true).map(x => x)}}
+{{subject.pipe(reduce(x => true), map(x => x))}}
