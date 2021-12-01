@@ -15,8 +15,8 @@ export class SomeComponent {
     constructor() {}
 
     private f() {
-        _.pluck([1, 2, 3], (x) => x);
-        this._.pluck([1, 2, 3], (x) => x);
+        _.map([1, 2, 3], (x) => x);
+        this._.map([1, 2, 3], (x) => x);
         this.subject.filter((x) => true).map((x) => x);
     }
 }
