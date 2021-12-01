@@ -9,7 +9,8 @@
   "dependencies": {
     "lodash": "3.10.1",
     "rxjs": "5.0.0",
-    "uuid": "2.0.0"
+    "uuid": "^3.0.0",
+    "uuid-parse": "^1.1.0"
   },
   "author": "",
   "license": "ISC"

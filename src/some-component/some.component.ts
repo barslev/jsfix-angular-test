@@ -1,3 +1,4 @@
+import { parse } from 'uuid-parse';
 import { Component } from '@angular/core';
 import _ from 'lodash';
 import rxjs from 'rxjs';
@@ -12,6 +13,7 @@ export class SomeComponent {
     _ = _;
     subject = new rxjs.Subject();
     uuid = uuid;
+    parse = parse;
     constructor() {}
 
     private f() {
